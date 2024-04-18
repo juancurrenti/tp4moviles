@@ -46,8 +46,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        viewModel.getLoginCorrecto().observe(this, isSuccess -> {
-            if (Boolean.TRUE.equals(isSuccess)) {
+        viewModel.getLoginCorrecto().observe(this, esCorrecto -> {
+            if (Boolean.TRUE.equals(esCorrecto)) {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 finish();
